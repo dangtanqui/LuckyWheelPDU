@@ -12,6 +12,8 @@ input.addEventListener("change", function () {
       return {
         fillStyle: generateLightColorHex(),
         text: row[0].toString(),
+        name: row[1].toString(),
+        className: row[2].toString(),
       };
     });
 
@@ -90,7 +92,13 @@ var result = document.getElementById("result");
 
 function alertPrize(indicatedSegment) {
   result.innerText =
-    "Xin chúc mừng chủ nhân số điện thoại: " + indicatedSegment.text;
+    "Xin chúc mừng: " +
+    indicatedSegment.name +
+    ", " +
+    indicatedSegment.className +
+    ", " +
+    indicatedSegment.text +
+    ".";
   statusButton(3);
 }
 
