@@ -9,36 +9,36 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
   <body>
-    <div>
-      <input type="file" id="input" />
-      <table class="table_wheel">
-        <tr>
-          <td>
-            <button
-              id="spin_start"
-              class="btn button_wheel"
-              onClick="startSpin();"
-            >
-              Quay ngay
-            </button>
-            <br /><br />
-            <button
-              id="spin_reset"
-              class="btn button_wheel"
-              onClick="resetWheel();"
-            >
-              Quay lại
-            </button>
-          </td>
-          <td class="the_wheel column_canvas_wheel">
-            <canvas id="canvas" width="434" height="434">
-              <p class="no_canvas">
-                Xin lỗi, trình duyệt này không hỗ trợ canvas.
-              </p>
-            </canvas>
-          </td>
-        </tr>
-      </table>
+    <div class="container">
+      <div class="row">
+        <div class="cell">
+          <input type="file" id="input" class="file_input" />
+        </div>
+        <div class="cell">
+          <button
+            id="spin_start"
+            class="btn button_wheel"
+            onClick="startSpin();"
+          >
+            Quay ngay
+          </button>
+        </div>
+        <div class="cell">
+          <button
+            id="spin_reset"
+            class="btn button_wheel"
+            onClick="resetWheel();"
+          >
+            Quay lại
+          </button>
+        </div>
+      </div>
+      <div class="the_wheel">
+        <canvas id="canvas" width="434" height="434">
+          <p class="no_canvas">Xin lỗi, trình duyệt này không hỗ trợ canvas.</p>
+        </canvas>
+      </div>
+      <h1 id="result" class="success"></h1>
     </div>
     <script src="js/Winwheel.min.js"></script>
     <script src="js/TweenMax.min.js"></script>

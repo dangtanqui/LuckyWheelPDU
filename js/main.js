@@ -14,7 +14,6 @@ input.addEventListener("change", function () {
         text: row[0].toString(),
       };
     });
-    console.log(data);
 
     if (data.length > 0) {
       theWheel = new Winwheel({
@@ -80,19 +79,23 @@ statusButton(1);
 let wheelSpinning = false;
 
 function startSpin() {
-  if (wheelSpinning == false) {
+  if (wheelSpinning == false && data.length > 0) {
     statusButton(2);
     theWheel.startAnimation(); // Hàm bắt đầu quay
     wheelSpinning = true;
   }
 }
 
+var result = document.getElementById("result");
+
 function alertPrize(indicatedSegment) {
-  alert("Chúc mừng bạn trúng: " + indicatedSegment.text);
+  result.innerText =
+    "Xin chúc mừng chủ nhân số điện thoại: " + indicatedSegment.text;
   statusButton(3);
 }
 
 function resetWheel() {
+  result.innerText = "";
   statusButton(1);
   theWheel.stopAnimation(false); // Hàm dừng quay, false là đối số để không gọi callback function.
   theWheel.rotationAngle = 0; // Reset góc bánh xe về 0 độ.
