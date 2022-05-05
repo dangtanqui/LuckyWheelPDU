@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vòng quay may mắn PDU</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+  </head>
+  <body>
+    <div>
+      <input type="file" id="input" />
+      <table class="table_wheel">
+        <tr>
+          <td>
+            <button
+              id="spin_start"
+              class="btn button_wheel"
+              onClick="startSpin();"
+            >
+              Quay ngay
+            </button>
+            <br /><br />
+            <button
+              id="spin_reset"
+              class="btn button_wheel"
+              onClick="resetWheel();"
+            >
+              Quay lại
+            </button>
+          </td>
+          <td class="the_wheel column_canvas_wheel">
+            <canvas id="canvas" width="434" height="434">
+              <p class="no_canvas">
+                Xin lỗi, trình duyệt này không hỗ trợ canvas.
+              </p>
+            </canvas>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="js/Winwheel.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

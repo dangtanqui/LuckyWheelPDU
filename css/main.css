@@ -1,0 +1,99 @@
+body {
+  font-family: arial;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sets the background image for the wheel */
+td.the_wheel {
+  background-image: url(../wheel_back.png);
+  background-position: center;
+  background-repeat: none;
+}
+
+/* Do some css reset on selected elements */
+h1,
+p {
+  margin: 0;
+}
+
+div.power_controls {
+  margin-right: 70px;
+}
+
+div.html5_logo {
+  margin-left: 70px;
+}
+
+/* Styles for the power selection controls */
+table.power {
+  background-color: #cccccc;
+  cursor: pointer;
+  border: 1px solid #333333;
+}
+
+table.power th {
+  background-color: white;
+  cursor: default;
+}
+
+td.pw1 {
+  background-color: #6fe8f0;
+}
+
+td.pw2 {
+  background-color: #86ef6f;
+}
+
+td.pw3 {
+  background-color: #ef6f6f;
+}
+
+.btn {
+  padding: 10px 20px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Style applied to the spin button once a power has been selected */
+.clickable {
+  cursor: pointer;
+}
+
+/* Other misc styles */
+.margin_bottom {
+  margin-bottom: 5px;
+}
+
+.button_wheel {
+  min-width: 120px;
+  margin-right: 50px;
+}
+
+.table_wheel {
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.table_wheel td {
+  padding: 0;
+}
+
+.column_canvas_wheel {
+  width: 438px;
+  height: 582px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no_canvas {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
