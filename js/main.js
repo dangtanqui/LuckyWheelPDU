@@ -8,11 +8,10 @@ var data = [];
 
 input.addEventListener("change", function () {
   readXlsxFile(input.files[0]).then(function (rows) {
-    rows.shift();
     data = rows.map((row) => {
       return {
         fillStyle: generateLightColorHex(),
-        text: row[1].toString(),
+        text: row[0].toString(),
       };
     });
     console.log(data);
